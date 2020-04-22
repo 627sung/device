@@ -19,8 +19,8 @@ public class Test19_t {
 	//	int discount = (int) (total * 0.25)
 		
 		int result = total - discount;
-		//result = result /100 * 100;  //뒤에 100원단위를 쳐내는 방법 //
-		result = (result+50) /100 * 100;  //뒤에 100원단위를 쳐내는 방법 //
+		result = result /100 * 100;  //뒤에 100원단위를 쳐내는 방법 //
+		//result = (result+50) /100 * 100;  //뒤에 100원단위를 쳐내는 방법 //
 		//result = (result+99) /100 * 100;  //뒤에 100원단위를 쳐내는 방법 //
 		
 		System.out.println(result);
