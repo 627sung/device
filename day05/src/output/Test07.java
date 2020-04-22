@@ -10,7 +10,7 @@ public class Test07 {
 		
 		
 		//준비
-		Scanner sc  = new Scanner(System.in); 
+		Scanner sc  = new Scanner(System.in);
 		System.out.println("닉네임입력");
         String nickname = sc.next(); // 닉네임을 사용자로부터 받아온다 
 		sc.close();

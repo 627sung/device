@@ -24,6 +24,8 @@ public class Test05_t {
 		int total = (int) (liter *  price);
 		
 		
+		
+		
 		System.out.println("필요 예상 경비는 " + total + "입니다");
 		
 		

@@ -26,7 +26,7 @@ public class Test08 {
 		System.out.println("결과는 " + isleapYear + "입니다");
 		
 		
-		
+	
 		
 		
 	}

@@ -23,7 +23,7 @@ public class Test06 {
 		//소수섬 2자리 이하 절삭
 		avg= avg*100;  // avg *=100
 		avg=(int)avg;  //
-		avg=avg/100; // avg /=100
+		avg=avg/100;
 		
 		
 		

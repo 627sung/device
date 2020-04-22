@@ -20,7 +20,7 @@ public class Test05 {
 		
 		int totalMove= stb + btm +mts;   //총 이동한거리
         double total = (totalMove/car);    //필요한 기름의 양
-        int totalPrice = (int)total*oilPrice; // 가격
+        int totalPrice = (int)total*oilPrice; // 가
         
         System.out.println("예상 기름값은 "+ totalPrice + "원 입니다");
 		
