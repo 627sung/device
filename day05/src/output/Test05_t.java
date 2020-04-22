@@ -9,11 +9,7 @@ public class Test05_t {
 		
 		int distance = 1050;  //여행거리
 		double effect = 10.5;  //연비
-		
 		double liter  = distance / effect; // 1 
-		
-		
-		
 		
 		System.out.println("여행에 필요한 기름은"  + liter + "L입니다");
 		System.out.println(liter);
@@ -28,9 +24,7 @@ public class Test05_t {
 		int total = (int) (liter *  price);
 		
 		
-		
-		
-		System.out.println("필요 예상 경비는" + total + "입니다");
+		System.out.println("필요 예상 경비는 " + total + "입니다");
 		
 		
 		
