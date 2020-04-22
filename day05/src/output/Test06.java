@@ -18,10 +18,16 @@ public class Test06 {
 		
 		//계산
 		int sum = korean+english+math; //점수총합
-		double avg = sum/3;
-		avg = (avg/100)*100;  //소수점 2자리 제거
+		double avg = (double)sum/3;
+	
+		//소수섬 2자리 이하 절삭
+		avg= avg*100;  // avg *=100
+		avg=(int)avg;  //
+		avg=avg/100; // avg /=100
 		
 		
+		
+		//출력
 		System.out.println("총점은 "+sum+ "점 입니다.");
 
 		System.out.println("평균은 "+avg+ "점 입니다.");
