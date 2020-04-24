@@ -27,17 +27,17 @@ public class Test10 {
 			int python =sc.nextInt();
 			sc.close();
 		
-	
-		double avg = (java + python) / 2.0;
+			int  sum = java + python;
+		double avg =  (int) sum / 2;
 		String grade; 
 
 		if (avg>=90 && avg <=100) {
 			grade = "A";
-		}else if (avg>=80 && avg <90) {
+		}else if (avg>=80) {
 			grade = "B";
-		}else if (avg>=70 && avg <80) {
+		}else if (avg>=70 ) {
 			grade = "C";
-		}else if (avg>=60 && avg <70) {
+		}else if (avg>=60 ) {
 			grade = "d";
 		}else {
 			grade = "F";
