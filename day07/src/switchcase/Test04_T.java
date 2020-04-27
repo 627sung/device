@@ -1,7 +1,7 @@
 package switchcase;
 import java.util.Random;
 import java.util.Scanner;
-public class Test04_ {
+public class Test04_T {
 
 	public static void main(String[] args) {
 		Random r= new Random();
@@ -33,7 +33,7 @@ public class Test04_ {
 			max =31; break;
 		case 4: case 6: case 9: case 11:
 			max =30; break;
-			default:
+			default:  //case 2월만 분기점을 준다. 윤년 / 아닌경우 
 			  if(isLeaf) {
 				  max = 29;
 			  }
