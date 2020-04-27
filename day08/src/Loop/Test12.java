@@ -16,9 +16,8 @@ public class Test12 {
 			int dice = r.nextInt(6) + 1; // 1~6까지 랜덤값 출력
 			total += dice; // 나온값을 계속 더하여 누적시킴
 			System.out.println("주사위= " + dice);
-			System.out.println(total);
-
-			count++;
+			System.out.println("던진 주사위의 합 =" + total);
+			count++;  //주사위를 던진뒤에 카운트를 올린다. 
 			if (total >= 50) {
 				break;
 			}
