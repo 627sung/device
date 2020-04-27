@@ -14,6 +14,7 @@ public class Test06 {
 			
 		}
 		System.out.println(total);
+		
 
 	}
 
