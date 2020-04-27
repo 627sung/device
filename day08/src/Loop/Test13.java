@@ -9,13 +9,13 @@ public class Test13 {
 		Random r = new Random();
 		Scanner sc = new Scanner(System.in);
 		// 설정해야할것
-		int comNum = r.nextInt(1000) + 1; // 컴터가 만든 숫자 제일 마지막에 설정합니다.
+		int comNum = r.nextInt(1000) + 1;   //1~1000까지 랜덤으로 골라짐
 		System.out.println("컴퓨터가 문제를 설정했어요 맞춰보십시요");
 		int count = 0;
 		while (true) {
-			int inputNum = sc.nextInt(); // 내가 넣은 숫자
+			int inputNum = sc.nextInt(); // 사용자가 넣는 숫자
 			count++;
-			if (comNum == inputNum) {
+			if (comNum == inputNum) {      //정답시
 				System.out.println("정답!  프로그램종료");
 				break;
 
