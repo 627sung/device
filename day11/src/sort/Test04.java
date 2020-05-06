@@ -24,12 +24,13 @@ public class Test04 {
 		}
 		}
 		
-		
+		//
 		for(int i =0; i<data.length; i++) {
 			System.out.println(data[i]);
 		}
 		
 		
+		System.out.println("깃허브수정");
 		//(2) 순서대로 넣어놓고 셔플;
 		
 		
