@@ -1,6 +1,6 @@
 package sort;
 
-public class Test03_1 {
+public class Test3_1 {
 
 	public static void main(String[] args) {
 //		데이터 준비
