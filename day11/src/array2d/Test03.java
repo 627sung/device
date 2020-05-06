@@ -35,9 +35,13 @@ public class Test03 {
 	for(int i=0; i<s[0].length; i++) {
 		total1+=s[0][i];
 	}
+	
+	
+	
 	double  avg1= (double)total1/s[0].length;
 	System.out.println(avg1);
 	int total2=0;
+	
 	for(int i=0; i<s[1].length; i++) {
 		total2+=s[0][i];
 	}
