@@ -14,14 +14,10 @@ public class Test01 {
 		a2.setting("슛돌이",55,90,85 );
 		a3.setting("피카츄",77,65,23);
 
-		//합계 구하기
-		a1.doSum();
-		a2.doSum();
-		a3.doSum();
-		//평균구하기
-		a1.doAvg();
-		a2.doAvg();
-		a3.doAvg();
+		//점수를 수정 
+		a1.kor =22;
+		
+		
 
 		//출력하기
 		a1.output();

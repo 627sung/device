@@ -1,7 +1,7 @@
 package oop.method4;
 
 public class score {
-
+	//멤바 필드(변수)데이터 저장 
 	String name;
 	int kor;
 	int eng;
@@ -9,7 +9,7 @@ public class score {
 	int sum;
 	double avg;
 	
-	//세팅 
+	//멤버 메소드 -코드저장
 	void setting(String name, int kor ) {
 		this.setting(name, kor,0,0);
 	
@@ -23,22 +23,21 @@ public class score {
 		this.kor=kor;
 		this.eng =eng;
 		this.math=math;
+	
 	}
 	
-	//합구하기 메소드
-	void doSum() {
-		sum=this.kor+this.eng+this.math;
-	}
-	
-	//평균구하기 메소드
-	void doAvg(){
-		avg=sum/3; 
-	}
+
 	
 	//출력메소드
 	void output() {
-		System.out.println(this.name +"의 합"+sum);
-		System.out.println(this.name +"의 평균"+avg);
+		int total=this.kor+this.eng+this.math; //지역변수사용 :메소드 실행시에만 잠시 사용할 변수 
+		double avg=total/3.0;
+		
+		
+		System.out.println("[학생정보]");
+		System.out.println("이름"+this.name);
+		System.out.println("총점"+total); //output이라는 메소드안에서만 사용  
+		System.out.println("평균"+avg); // output이라는 메소드안에서만 사용 
 	}
 	
 	
