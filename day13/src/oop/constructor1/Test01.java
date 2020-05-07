@@ -9,6 +9,13 @@ public class Test01 {
 		s1.output();
 		
 		
+		
+		
+		
+		
+		
+		
+		
 	}
 
 }
