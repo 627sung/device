@@ -4,18 +4,19 @@ public class Test01 {
 public static void main(String[] args) {
 	
 	Chrome c = new Chrome();
-	c.url="www.google.com";
-	c.version="2.0.c";
+	c.setUrl( "www.google.com");
+	c.setVersion("80");
 	c.move();
 	c.back();
 	c.store();
 	
 	Firefox f= new Firefox();
-	f.url="www.firefox.com";
-	f.version="2.0.F";
+	f.setUrl("www.firefox.com");
+	f.setVersion("2.0.F");
 	f.move();
 	f.back();
 	 
+	
 	
 	
 	
