@@ -18,4 +18,23 @@ public class UnitFactory {
 		}
 		return unit;
 	}
+		
+		
+		public static FlyingUnit generateFlyingUnit() {
+			Random r = new Random();
+			int a = r.nextInt(2);//오버로드(0), Wraith(1)
+			
+//			FlyingUnit  unit = 오버로드 or 레이쓰;
+			FlyingUnit unit;
+			if(a == 0) {
+				unit = new Overlord();//up-casting(FlyingUnit -> GroundUnit)
+			}
+			else {
+				unit = new Wraith();//up-casting(FlyingUnit -> GroundUnit)
+			}
+			return unit;
+		
+		
+		
+	}
 }
