@@ -1,6 +1,8 @@
 package oop.inherit6;
 
 public class  GalaxyNote10 extends Galaxy {
+	
+	
 	public void call() {
 		System.out.println("GalaxyNote10의  전화 기능을 실행합니다.");
 	}

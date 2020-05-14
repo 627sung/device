@@ -25,7 +25,6 @@ public class Test01 {
 		c.number = "010-4212-7894";
 		c.output();
 		c.call();
-		c.sms();
 		c.airDrop();
 		c.itunes();
 		
@@ -35,7 +34,6 @@ public class Test01 {
 		d.number = "010-4178-5712";
 		d.output();
 		d.call();
-		d.sms();
 		d.airDrop();
 		d.siri();
 		
