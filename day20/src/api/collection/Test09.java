@@ -1,68 +1,42 @@
 package api.collection;
 
-import java.util.Random;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Test09 {
 	public static void main(String[] args) {
-		//임시비밀번호 발급
-		//사용자에게 프로그램을 실행하면 다음규칙에 맞게 임시 비밀번호를 발급하여 화면에 출력 
-		//규칙 자릿수는 총 10개의 글자로 구성!
-		//-숫자,영어,대/소문자 랜덤구성되어있음 
-		//똑같은 글자는 여러번 나올수 있습니다. 
-		//결과는 스트링으로 나온다 ..
-		// 가급적 스트링 버퍼를 쓰세요 
-
-	
-		char[] data = new char[] { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
-				'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-				'a', 'b', 'c', 'e', 'f' ,'g', 'h','i','j','k','l','m','n','o','p','q','r','s','t','v','w','x','y','z'};
-
-		System.out.println("임시번호추출!");
-		StringBuffer pw = new StringBuffer();
+//		1. 한자리의 랜덤글자를 생성
+//		2. 1번을 10번 반복하여 합성
+//		3. 합성된 결과를 화면에 출력
 		
+//		String password = "1V2cTug89k";
 		
-	for(int i =0; i<10; i++) {
-		Random r= new Random();
-		int n=r.nextInt(data.length);
-		pw.append(data[n]);
+//		만약 알파벳 소문자만 뽑으라고 한다면 90 ~ 122 까지 랜덤값을 뽑으면 된다.
+//		지금은 범위가 떨어져 있기 때문에 붙어있는 값을 추첨할 수 없다.
+//		추첨해야될 글자들을 전부다 List에 추가한 뒤 무작위로 추첨
 		
-	}
+		List<String> list = new ArrayList<>();
 		
-		System.out.println(pw.toString());
-
-
+//		list에 숫자와 알파벳 소문자, 대문자를 추가(10+26+26=62번)
+		for(char i='a'; i <= 'z'; i++) {
+			list.add(String.valueOf(i));
+		}
 		
-	
+		for(char i='A'; i <= 'Z'; i++) {
+			list.add(String.valueOf(i));
+		}
 		
+		for(char i='0'; i <= '9'; i++) {
+			list.add(String.valueOf(i));
+		}
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
-
-		
-		
-		
-		
-
-	
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
+		System.out.println(list);
 	}
 }
+
+
+
+
+
+
+

@@ -6,30 +6,29 @@ import java.util.Scanner;
 
 public class Test07_1 {
 	public static void main(String[] args) {
-
-		//준비물 Scanner, List;
-
+//		준비물 : Scanner, List<String>
+		
 		Scanner sc = new Scanner(System.in);
-
-		List<String> list = new ArrayList<>();
-
-		while (true) {
-			System.out.println("사자성어를 입력");
-			String input = sc.next();
-			if (!list.contains(input) && input.length() == 4) {
-				list.add(input);
-			} else {
+		List<String> memory = new ArrayList<>();
+		
+		while(true) {
+			System.out.println("사자성어 입력");
+			String word = sc.nextLine();
+			
+			if(!memory.contains(word)) {//memory에 word가 없을 때
+				memory.add(word);//word를 memory에 추가
+//				System.out.println(memory);
+			}
+			else {
 				break;
 			}
-
 		}
+		
 		sc.close();
-		
-		
-		for(String input :list) {
-			System.out.println(input);
-		}
-
 	}
-
 }
+
+
+
+
+
