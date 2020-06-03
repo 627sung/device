@@ -67,7 +67,33 @@ public class ClientDao {
 	
 		
 		
+		//검색메소드
+		public List<ClientDto> search(String keyword) throws Exception {
+			Connection	con = getConnection();
+			String sql = "SELECT * FROM client WHERE instr(CLIENT_ID, ?)>0 or instr(CLIENT_AUTH , ?)>0 order by client_no asc";
+
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, keyword);
+			ps.setString(2, keyword);
+			ResultSet rs = ps.executeQuery();
+
+			List<ClientDto>list = new ArrayList<>();
+			
+			while(rs.next()) {
+				ClientDto cdto = new ClientDto ();
+				cdto.setClient_no(rs.getInt("client_no"));
+				cdto.setClient_id(rs.getString("client_id" ));
+				cdto.setClient_pw(rs.getString("client_pw" ));
+				cdto.setClient_auth(rs.getString("client_auth" ));
+				cdto.setClient_join(rs.getString("client_join" ));
+				cdto.setClient_point(rs.getInt("client_point" ));
+				list.add(cdto);
+			}
+			
+			con.close();
+			return list;
 		
+		}
 	
 	
 	
