@@ -13,11 +13,8 @@
 				<tr height="100">
 					<td align="center"><h1>홈페이지입니다</h1></td>
 				</tr>
-
 				<tr>
-					<td><a href="#">홈으로</a> <a href="#">가입</a> <a href="#">로그인</a>
-						<a href="#">로그아웃</a> <a href="#">내정보</a> <a href="#">정보수정</a> <a
-						href="#">회원탈퇴</a> <a href="#">관리메뉴</a> <a href="#">게시판</a></td>
+					<td><jsp:include page ="/template/menu.jsp"></jsp:include></td>
 
 				</tr>
 
