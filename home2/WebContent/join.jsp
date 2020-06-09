@@ -4,5 +4,7 @@
 
 <div align = "center">
 <h2>회원가입페이지</h2>
+
+<table border="1" width="500"></table>
 </div>
 <jsp:include page="/template/footer.jsp"></jsp:include>
