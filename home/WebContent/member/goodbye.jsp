@@ -4,11 +4,9 @@
 <jsp:include page="/template/header.jsp"></jsp:include>
 
 <div align="center">
-
-	<h2>회원 가입이 완료되었습니다</h2>
-	
-	<h4><a href="login.jsp">로그인 하러가기</a></h4>
-
+	<h2>그동안 이용해주셔서 감사합니다</h2>
+	<h5>다음에 또 만나요</h5>
+	<h5><a href="<%=request.getContextPath()%>">홈으로 이동하기</a></h5>
 </div>
 
 <jsp:include page="/template/footer.jsp"></jsp:include>

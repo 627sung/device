@@ -7,7 +7,7 @@
 	
 	<h2>로그인</h2>
 	
-	<form action="">
+	<form action="login.do" method="post">
 		<table border="0">
 			<tbody>
 				<tr>
@@ -31,7 +31,7 @@
 				</tr>
 				<tr align="center">
 					<td colspan="2">
-						<a href="#">아이디가 기억나지 않습니다</a>
+						<a href="find_id.jsp">아이디가 기억나지 않습니다</a>
 						<br>
 						<a href="#">비밀번호가 기억나지 않습니다</a>
 					</td>
@@ -39,10 +39,16 @@
 			</tfoot>
 		</table>
 	</form>	
-
+	
+	<%if(request.getParameter("error") != null){%>
+		<!-- 오류 메시지는 페이지에 error라는 파라미터가 있을 경우만 출력 -->
+		<h6><font color="#FF0000">입력하신 로그인 정보가 맞지 않습니다</font></h6>
+	<%} %>
+	
 </div>
 
 <jsp:include page="/template/footer.jsp"></jsp:include>
+
 
 
 
