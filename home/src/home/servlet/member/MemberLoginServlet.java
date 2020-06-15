@@ -12,7 +12,7 @@ import home.beans.dao.MemberDao;
 import home.beans.dto.MemberDto;
 
 //http://localhost:8080/home/member/login.do
-@WebServlet(urlPatterns = "/member/login.do")
+//@WebServlet(urlPatterns = "/member/login.do")
 public class MemberLoginServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

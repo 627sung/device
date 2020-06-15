@@ -12,7 +12,7 @@ import home.beans.dao.MemberDao;
 import home.beans.dto.MemberDto;
 
 //회원가입 흐름도(flow graph)에 의하면 주소는 http://localhost:8080/home/member/join.do 이다.
-@WebServlet(urlPatterns = "/member/join.do")
+//@WebServlet(urlPatterns = "/member/join.do")
 public class MemberJoinServlet extends HttpServlet{
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

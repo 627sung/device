@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 //이 필터의 목적은 모든 요청을 UTF-8로 복원하는 것
 // - 감시할 주소 : 전체(/*)
 
-@WebFilter(urlPatterns = "/*")
+//@WebFilter(urlPatterns = "/*")
 public class EncodingFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
