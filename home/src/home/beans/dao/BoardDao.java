@@ -17,6 +17,7 @@ public class BoardDao {
 		return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "c##kh", "c##kh");
 		}
 	
+	
 	public List<BoardDto> get() throws Exception{
 		Connection con = getConnection();
 		
