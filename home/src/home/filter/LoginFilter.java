@@ -7,25 +7,24 @@ import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import home.beans.dto.MemberDto;
 
-@WebFilter(urlPatterns = {
-		"/member/info.jsp",
-		"/member/logout.do",
-		"/member/change_password.jsp",
-		"/member/change_password.do",
-		"/member/change_password_result.jsp",
-		"/member/exit.do",
-		"/member/change_info.jsp",
-		"/member/change_info.do",
-		"/member/check.jsp",
-		"/member/check.do",
-	//	"/admin/*"
-})
+//@WebFilter(urlPatterns = {
+//		"/member/info.jsp",
+//		"/member/logout.do",
+//		"/member/change_password.jsp",
+//		"/member/change_password.do",
+//		"/member/change_password_result.jsp",
+//		"/member/exit.do",
+//		"/member/change_info.jsp",
+//		"/member/change_info.do",
+//		"/member/check.jsp",
+//		"/member/check.do",
+//		"/admin/*"
+//})
 public class LoginFilter implements Filter{
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -65,6 +64,7 @@ public class LoginFilter implements Filter{
 		}
 	}
 }
+
 
 
 
