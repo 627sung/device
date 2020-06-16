@@ -17,30 +17,10 @@ public class BoardDao {
 		return DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "c##kh", "c##kh");
 		}
 	
-	
-	public List<BoardDto> get() throws Exception{
-		Connection con = getConnection();
-		
-		String sql = "SELECT * FROM board";
-		PreparedStatement ps = con.prepareStatement(sql);
-		ResultSet rs = ps.executeQuery();
-		
-		
-		List<BoardDto> list = new ArrayList<>();
-		while(rs.next()) {
-			BoardDto  bdto= new BoardDto();
-			list.add(bdto);
-		}
-		
-		con.close();
-		
-		return list;
-	
+
 		
 		
 		
 
-	}
-	 
 	
 }
