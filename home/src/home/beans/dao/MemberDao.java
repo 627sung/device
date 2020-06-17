@@ -10,7 +10,7 @@ import java.util.List;
 import home.beans.dto.MemberDto;
 
 public class MemberDao {
-
+//주석
 	//연결 메소드
 	public Connection getConnection() throws Exception{
 		Class.forName("oracle.jdbc.OracleDriver");
