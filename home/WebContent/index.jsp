@@ -14,8 +14,7 @@
 						
 <div align="center">
 	<h2>와주셔서 감사합니다!</h2>
-	<img alt="환영 이미지" src="https://placehold.it/750x300">
-</div>
+	<img alt="환영 이미지" src="https://mblogthumb-phinf.pstatic.net/MjAxODA4MDZfMjA5/MDAxNTMzNDg4NTc2NTY4.29Wo9IqnEpDQl8qZna7BpY4AxVeFO6X_VKf8fVDMunUg.VpV5oS-ykXrcEw9VvFzEFIGV1q7jZbE58YDhoNCeFaog.JPEG.m3limc123/1.jpg?type=w800">
 
 <%-- <%@ include file="/template/footer.jsp" %> --%>
 <jsp:include page="/template/footer.jsp"></jsp:include>
