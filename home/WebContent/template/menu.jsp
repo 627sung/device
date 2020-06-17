@@ -29,13 +29,13 @@
 	<a href="<%=rootPath%>/admin/home.jsp">관리메뉴</a>
 	<%} %>
 	
-	<a href="#">게시판</a>
+	<a href="<%=rootPath%>/board/list.jsp">게시판</a>
 <%}else{ %>
 	<!-- 로그아웃 상태일 경우 -->
 	<a href="<%=rootPath%>/index.jsp">홈으로</a>
 	<a href="<%=rootPath%>/member/join.jsp">회원가입</a>
 	<a href="<%=rootPath%>/member/login.jsp">로그인</a>
-	<a href="#">게시판</a>
+	<a href="<%=rootPath%>/board/list.jsp">게시판</a>
 <%} %>
 
 
