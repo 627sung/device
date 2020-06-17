@@ -60,7 +60,7 @@
 					<%if(bdto.getBoard_writer() != null){ %>
 						<%=bdto.getBoard_writer()%>
 					<%} else { %>
-						<font color="gray">탈퇴한 사용자</font>
+						<font color="gray">탈퇴한사용자</font>
 					<%} %>
 					
 					<%if(mdto != null){ %>
