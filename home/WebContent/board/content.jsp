@@ -1,3 +1,6 @@
+<%@page import="home.beans.dao.ReplyDao"%>
+<%@page import="java.util.List"%>
+<%@page import="home.beans.dto.ReplyDto"%>
 <%@page import="java.util.HashSet"%>
 <%@page import="java.util.Set"%>
 <%@page import="home.beans.dto.MemberDto"%>
@@ -5,7 +8,7 @@
 <%@page import="home.beans.dto.BoardDto"%>
 <%@page import="home.beans.dao.BoardDao"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <%
 	//상세조회 페이지를 구현하기 위해서는
 	//1. 준비 : P.K(기본키)가 필요. 게시판에서는 board_no
@@ -58,7 +61,18 @@
 	
 	// - 내글 : 게시글(bdto)의 작성자와 로그인 된 사용자(user)의 아이디가 같아야 함
 	boolean isMine = user.getMember_id().equals(bdto.getBoard_writer());
-%>     
+
+
+	//리플을 불러옵니다. 
+	ReplyDao rdao = new ReplyDao();
+	List<ReplyDto> replylist  = rdao.getList(board_no);  // 
+	
+
+
+
+
+
+%>
 
 <jsp:include page="/template/header.jsp"></jsp:include>
 
@@ -69,46 +83,94 @@
 	<table border="1" width="60%">
 		<tbody>
 			<tr>
-				<td>
-					<font size="6">
-					<%if(bdto.getBoard_head() != null){ %>
-						<!-- 말머리는 있을 경우만 출력 -->
-						[<%=bdto.getBoard_head()%>]
-					<%} %>
-					
-					<%=bdto.getBoard_title()%>
-					</font>
-				</td>
+				<td><font size="6"> <%if(bdto.getBoard_head() != null){ %>
+						<!-- 말머리는 있을 경우만 출력 --> [<%=bdto.getBoard_head()%>] <%} %> <%=bdto.getBoard_title()%>
+				</font></td>
 			</tr>
 			<tr>
 				<td>
-					<!-- 작성자 -->
-					<%if(bdto.getBoard_writer() != null){ %>
-						<%=bdto.getBoard_writer()%>
-					<%} else { %>
-						<font color="gray">탈퇴한 사용자</font>
-					<%} %>
-					
-					<%if(mdto != null){ %>
-					<!-- 작성자 권한은 사용자가 탈퇴한 경우에는 출력하지 않는다 -->
-					<font color="gray">
-					<%=mdto.getMember_auth()%>
-					</font>
-					<%} %>
+					<!-- 작성자 --> <%if(bdto.getBoard_writer() != null){ %> <%=bdto.getBoard_writer()%>
+					<%} else { %> <font color="gray">탈퇴한 사용자</font> <%} %> <%if(mdto != null){ %>
+					<!-- 작성자 권한은 사용자가 탈퇴한 경우에는 출력하지 않는다 --> <font color="gray">
+						<%=mdto.getMember_auth()%>
+				</font> <%} %>
 				</td>
 			</tr>
 			<tr>
-				<td>
-					<%=bdto.getBoard_date()%>
-					조회 <%=bdto.getBoard_read()%>
-				</td>
+				<td><%=bdto.getBoard_date()%> 조회 <%=bdto.getBoard_read()%></td>
 			</tr>
 			<tr height="300">
-				<td valign="top">
-					<%=bdto.getBoard_content()%>
-				</td>  
+				<td valign="top"><%=bdto.getBoard_content()%></td>
 			</tr>
+
+			<!-- 댓글 목록 영역 -->
+			<tr>
+			<tr>
+				<td>
+
+					<table width="99%">
+						<tbody>
+							<%for(ReplyDto rdto : replylist){ %>
+							<tr>
+								<td>
+									<div><%=rdto.getReply_writer()%>
+									<!-- 게시글 작성자인 경우 추가적으로 표시합니다 -->
+									
+										<%
+// 											boolean isWriter = 게시글작성자 존재 && 댓글작성자 존재 && 두 작성자 일치;
+											boolean isWriter = bdto.getBoard_writer() != null;
+											isWriter = isWriter && rdto.getReply_writer() != null;
+											isWriter = isWriter && bdto.getBoard_writer().equals(rdto.getReply_writer());
+											if(isWriter){
+										%>
+										<font color="red">(작성자)</font>
+										<%} %>
+									</div>
+									<div><%=rdto.getReply_content()%></div>
+									<div><%=rdto.getReply_date()%></div>
+								</td>
+
+							<td width="15%">
+									<!-- 
+										수정 삭제 버튼은 "내 댓글" 이거나 "관리자" 인 경우만 표시
+									 -->
+									<%
+// 										boolean isMyReply = 내 아이디가 작성자와 같은 경우;
+										boolean isMyReply = user.getMember_id().equals(rdto.getReply_writer());
+										if(isAdmin || isMyReply){
+									%>
+									수정 | 
+									<a href ="reply_delete.do?reply_no=<%=rdto.getReply_no()%>&reply_origin=<%=board_no%>">
+									삭제</a>
+									<%} %>
+								</td>
+							</tr>
+							<%} %>
+
+
+
+
+
+
+
+
+				</td>
+			</tr>
+
+			<!-- 댓글 작성 영역 -->
+			<tr>
+				<td align="right">
+					<form action="reply_insert.do" method="post">
+						<input type  = "hidden" name = "reply_writer" value = "<%=user.getMember_id() %>" > 
+						<textarea name="reply_content" rows="4" cols="80" placeholder="댓글 작성"></textarea>
+						<input type  = "hidden" name = "reply_origin" value = "<%=board_no %>" > 
+						<br> <input type="submit" value="등록">
+					</form>
+				</td>
+			</tr>
+
 		</tbody>
+
 		<!-- 각종 버튼들 구현 -->
 		<tfoot>
 			<tr>
@@ -117,7 +179,9 @@
 					<input type="button" value="글쓰기">
 					</a>
 					
+					<a href="write.jsp?board_no=<%=board_no%>">
 					<input type="button" value="답글">
+					</a>
 					
 					<%if(isAdmin || isMine){ %>
 					<!-- 관리자이거나 내 글인 경우만 수정/삭제 버튼을 표시 -->
