@@ -197,7 +197,7 @@
     -->
    <%if(startBlock > 1){ %>
    
-      <%if(!isSearch){ %> 
+      <%if(!isSearch){ %> <!-- 검색이 아니면  -->
          <a href="list.jsp?page=<%=startBlock-1%>">[이전]</a>
       <%}else{ %>
          <a href="list.jsp?page=<%=startBlock-1%>&type=<%=type%>&keyword=<%=keyword%>">[이전]</a>

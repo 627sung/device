@@ -9,10 +9,10 @@
 	- multipart/form-data로 변경하면 전송 방식이 파일에 적합하게 변경된다.
 -->
 <h1>파일 업로드 화면</h1>
-<form action="upload.do" method="post"  enctype="multipart/form-data">
+<form action="upload2.do" method="post"  enctype="multipart/form-data">
 	<input type="text" name="uploader">
 	<br><br>
-	<input type="file" name="f" multiple accept = ".jpg, .gif, .png"> <!--multiple 여러개 , accept = ".jpg, .gif, .png" 확장자 제한  -->
+	<input type="file" name="f">
 	<br><br>
 	<input type="submit" value="업로드">
 </form>

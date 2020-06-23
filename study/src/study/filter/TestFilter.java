@@ -12,7 +12,7 @@ import javax.servlet.annotation.WebFilter;
 
 //url패턴에 감시할 대상의 주소를 적는다. 
 // /* 모든 주소를 의미한다 
-@WebFilter(urlPatterns = "/index.jsp") 
+//@WebFilter(urlPatterns = "/index.jsp") 
 public class TestFilter implements Filter {
 
 	@Override
