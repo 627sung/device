@@ -1,3 +1,5 @@
+<%@page import="home.beans.dto.BoardFileDto"%>
+<%@page import="home.beans.dao.BoardFileDao"%>
 <%@page import="home.beans.dao.ReplyDao"%>
 <%@page import="java.util.List"%>
 <%@page import="home.beans.dto.ReplyDto"%>
@@ -67,7 +69,10 @@
 	ReplyDao rdao = new ReplyDao();
 	List<ReplyDto> replylist  = rdao.getList(board_no);  // 
 	
-
+	
+	//댓글 목록을 구해오는 코드 
+	BoardFileDao bfdao = new BoardFileDao();
+	List<BoardFileDto> fileList = bfdao.getList(board_no);
 
 
 
@@ -102,6 +107,29 @@
 			<tr height="300">
 				<td valign="top"><%=bdto.getBoard_content()%></td>
 			</tr>
+
+
+         <!-- 첨부파일 출력 영역 : 첨부파일이 있는 경우만 출력 -->
+			<%if(!fileList.isEmpty()){ %>
+			<tr>
+				<td>
+					첨부파일 목록
+					<ul>
+						<%for(BoardFileDto bfdto : fileList){ %>
+						<li>
+						<%=bfdto.getBoard_file_name()%>
+						(<%=bfdto.getBoard_file_size()%> bytes)
+						<!-- 다운로드 버튼을 누른다면 해당 파일을 다운로드 할 수 있도록 링크 -->
+						<a href="download.do?board_file_no=<%=bfdto.getBoard_file_no()%>">다운로드</a>
+						</li>
+						<%} %>
+					</ul>
+				</td>
+			</tr>
+			<%} %>
+
+
+
 
 			<!-- 댓글 목록 영역 -->
 			<tr>

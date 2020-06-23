@@ -14,6 +14,7 @@ import javax.naming.NamingException;
 import javax.sql.DataSource;
 
 import home.beans.dto.BoardDto;
+import home.beans.dto.BoardFileDto;
 
 public class BoardDao {
 	
@@ -325,15 +326,12 @@ public class BoardDao {
 		return count;
 	}
 		
-		
-		
-		
-		
-	}
 	
+	}
 
 
 
+	
 
 
 
