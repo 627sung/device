@@ -4,6 +4,7 @@
 	write.jsp : 게시글 작성 페이지
 	- 입력 항목은 3개 : board_head, board_title, board_content
 	- 작성자는 회원정보가 자동으로 설정
+	첨부 파일을 추가 할 수 있도록 구현 (이미지만 허용 )
  -->
  
 <jsp:include page="/template/header.jsp"></jsp:include>
@@ -13,7 +14,13 @@
 	<h2>게시글 작성</h2>
 	
 	<!-- 게시글 전송 폼 -->
-	<form action="write.do" method="post">
+	<form action="write.do" method="post" enctype="multipart/form-data">
+	
+
+      <!-- 원본글번호가 넘어온다면(즉, 답글이라면) 원본글번호를 hidden으로 첨부 -->
+      <%if(request.getParameter("board_no") !=null){ %>
+      <input type="hidden" name="board_no" value="<%=request.getParameter("board_no")%>">
+      <%} %>
 		
 		<table border="1">
 			<tbody>
@@ -43,6 +50,15 @@
 						<textarea name="board_content" required rows="15" cols="72"></textarea>
 					</td>  
 				</tr>
+				<!-- 첨부파일 -->
+				<tr>
+					<th>첨부파일</th>
+				<td>
+					<input type = "file" name = "board_file" multiple accept = ".jpg, .png, .gif">
+				</td>
+				</tr>
+				
+				
 			</tbody>
 			<tfoot>
 				<tr>

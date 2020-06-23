@@ -11,3 +11,6 @@ board_read number default 0 not null
 
 -- 게시판 시퀀스 생성
 create sequence board_seq nocache;
+
+
+

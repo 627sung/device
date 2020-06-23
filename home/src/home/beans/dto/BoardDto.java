@@ -9,6 +9,16 @@ import java.util.Date;
 public class BoardDto {
 	private int board_no, board_read;
 	private String board_head, board_title, board_writer, board_content, board_date;
+	private int board_replycount;
+	
+	
+	
+	public int getBoard_replycount() {
+		return board_replycount;
+	}
+	public void setBoard_replycount(int board_replycount) {
+		this.board_replycount = board_replycount;
+	}
 	public BoardDto() {
 		super();
 	}
@@ -21,6 +31,13 @@ public class BoardDto {
 		this.setBoard_writer(rs.getString("board_writer"));
 		this.setBoard_date(rs.getString("board_date"));
 		this.setBoard_read(rs.getInt("board_read"));
+		this.setBoard_replycount(rs.getInt("board_replycount"));
+		this.setSuper_no(rs.getInt("super_no"));
+		this.setGroup_no(rs.getInt("group_no"));
+		this.setDepth(rs.getInt("depth"));
+		
+		
+		
 	}
 	public int getBoard_no() {
 		return board_no;
@@ -88,6 +105,35 @@ public class BoardDto {
 	      return getBoard_day();
 	   }
 	   }
+	   
+	   
+	   //계층형 게시판을 위한 추가 데이터
+	   private int super_no;
+
+		private int group_no;
+		   private int depth;
+
+	   public int getSuper_no() {
+		return super_no;
+	}
+	public void setSuper_no(int super_no) {
+		this.super_no = super_no;
+	}
+	public int getGroup_no() {
+		return group_no;
+	}
+	public void setGroup_no(int group_no) {
+		this.group_no = group_no;
+	}
+	public int getDepth() {
+		return depth;
+	}
+	public void setDepth(int depth) {
+		this.depth = depth;
+	}
+
+
+	   
 	   
 	}
 
