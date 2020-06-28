@@ -4,11 +4,9 @@
 <jsp:include page="/template/header.jsp"></jsp:include>
 
 <div align="center">
-
-	<h2>회원 가입이 완료되었습니다</h2>
-	
-	<h4><a href="login.jsp">로그인 하러가기</a></h4>
-
+	<h2>존재하지 않는 페이지입니다</h2>
+	<img src="<%=request.getContextPath()%>/image/404.gif" width="700" height="400">
 </div>
+
 
 <jsp:include page="/template/footer.jsp"></jsp:include>

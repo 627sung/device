@@ -1,16 +1,25 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 
-<!-- 페이지 불러오그 (include)를 위해서는 두 가지 방법이 존재 (정적,동적                                         -->
+<jsp:include page="/template/header.jsp"></jsp:include>
+<article class="w-70">
+	<div class="row">
+		<h2>홈페이지 방문을 환영해요</h2>
+	</div>
+	<div class="row">
+		<img src="https://placeimg.com/500/500/tech" width="100%"
+			height="400px"; >
+	</div>
+</article>
 
-<%@ include file = "/template/header.jsp"%>
 
-<div align="center">
-<h2>와주셔서 감사합니다</h2>
-   
+<jsp:include page="/template/footer.jsp"></jsp:include>
 
 
-<img alt="환영 이미지" src="https://placehold.it/750x300">
-</div>
-<%@ include file = "/template/footer.jsp" %>
-<!-- 고정 영역                                           -->
+
+
+
+
+
+
+
