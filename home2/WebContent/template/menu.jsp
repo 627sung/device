@@ -8,42 +8,47 @@
 	- context path(프로젝트명으로 구성된 주소) 는 언제든지 바뀔 수 있다
 		- 변하는 경로에 맞게 경로를 계산해내는 명령이 필요 : request.getContextPath()
  -->
-<%
-	//rootPath에는 프로젝트 root path(/home)가 자동으로 계산되어 저장된다. 이는 절대경로 작성 시 활용할 수 있다.
-	String rootPath = request.getContextPath();
+ 
+ <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+ <c:set var="rootPath" value=${pageContext.request.contextPath} ></c:set>
 
-	//로그인 여부에 따른 메뉴 구성을 변경
-	// - 세션에 "userinfo"라는 데이터가 있으면 로그인 , 없으면 로그아웃 상태
-	MemberDto mdto = (MemberDto)session.getAttribute("userinfo");//다운캐스팅(down-casting)
-	boolean isLogin = mdto != null;
-%>
+<c:choose>
+<c:when test="${uesrinfo.Member_auth()=='관리자'}">
+<!-- 관리자가보는메뉴 -->
 
-<% if(isLogin && mdto.getMember_auth().equals("관리자")){ %>
 <ul class="menu">
-    <li><a href="<%=rootPath%>/index.jsp">홈으로</a></li>
-    <li><a href="<%=rootPath%>/member/logout.do">로그아웃</a></li>
-    <li><a href="<%=rootPath%>/admin/home.jsp">관리메뉴</a></li>
-    <li><a href="<%=rootPath%>/board/list.jsp">게시판</a></li>
+    <li><a href="${rootPath}/index.jsp">홈으로</a></li>
+    <li><a href="${rootPath}/member/logout.do">로그아웃</a></li>
+    <li><a href="${rootPath}/admin/home.jsp">관리메뉴</a></li>
+    <li><a href="${rootPath}/board/list.jsp">게시판</a></li>
 </ul>
-<% }else if(isLogin){ %>
+<!-- 회원이보는메뉴 -->
+
+</c:when>
+<c:when test="${userinfo!=null}">
 <ul class="menu">
-    <li><a href="<%=rootPath%>/index.jsp">홈으로</a></li>
-    <li><a href="<%=rootPath%>/member/logout.do">로그아웃</a></li>
-    <li><a href="<%=rootPath%>/member/info.jsp">내정보</a></li>
-    <li><a href="<%=rootPath%>/board/list.jsp">게시판</a></li>
+    <li><a href="${rootPath}/index.jsp">홈으로</a></li>
+    <li><a href="${rootPath}/member/logout.do">로그아웃</a></li>
+    <li><a href="${rootPath}/member/info.jsp">내정보</a></li>
+    <li><a href="${rootPath}/board/list.jsp">게시판</a></li>
 </ul>
-<% }else{ %>
+
+</c:when>
+<c:otherwise>
+<!-- 비회원이보는메뉴 -->
 <ul class="menu">
-    <li><a href="<%=rootPath%>/index.jsp">홈으로</a></li>
-    <li><a href="<%=rootPath%>/member/join.jsp">회원가입</a></li>
-    <li><a href="<%=rootPath%>/member/login.jsp">로그인</a></li>
-    <li><a href="<%=rootPath%>/board/list.jsp">게시판</a></li>
+    <li><a href="${rootPath}/index.jsp">홈으로</a></li>
+    <li><a href="${rootPath}/member/join.jsp">회원가입</a></li>
+    <li><a href="${rootPath}/member/login.jsp">로그인</a></li>
+    <li><a href="${rootPath}/board/list.jsp">게시판</a></li>
 </ul>
-<% } %>
+ </c:otherwise>
+
+</c:choose>
 
 
 
-	
+
 
 
 

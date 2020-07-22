@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
+  associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="home.beans.dao.BoardDao" project="home2" 
+    file="/home2/src/home/beans/dao/BoardDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="315" width="232" x="2308" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="home.beans.dao.BoardFileDao" project="home2" 
+    file="/home2/src/home/beans/dao/BoardFileDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="170" x="1294" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="home.beans.dao.DailyCountDao" project="home2" 
+    file="/home2/src/home/beans/dao/DailyCountDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="224" x="1713" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="home.beans.dao.MemberDao" project="home2" 
+    file="/home2/src/home/beans/dao/MemberDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="213" x="4468" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="home.beans.dao.ReplyDao" project="home2" 
+    file="/home2/src/home/beans/dao/ReplyDao.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="160" x="763" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="home.beans.dto.BoardDto" project="home2" 
+    file="/home2/src/home/beans/dto/BoardDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="747" width="171" x="365" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="7" language="java" name="home.beans.dto.BoardFileDto" project="home2" 
+    file="/home2/src/home/beans/dto/BoardFileDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="369" width="181" x="5052" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="home.beans.dto.DailyCountDto" project="home2" 
+    file="/home2/src/home/beans/dto/DailyCountDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="207" width="147" x="576" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="9" language="java" name="home.beans.dto.MemberDto" project="home2" 
+    file="/home2/src/home/beans/dto/MemberDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="783" width="196" x="3239" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="10" language="java" name="home.beans.dto.ReplyDto" project="home2" 
+    file="/home2/src/home/beans/dto/ReplyDto.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="369" width="169" x="1504" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="11" language="java" name="home.servlet.board.BoardDeleteServlet" project="home2" 
+    file="/home2/src/home/servlet/board/BoardDeleteServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="291" x="4137" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="12" language="java" name="home.servlet.board.BoardEditServlet" project="home2" 
+    file="/home2/src/home/servlet/board/BoardEditServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="288" x="2911" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="13" language="java" name="home.servlet.board.BoardFileDownloadServlet" project="home2" 
+    file="/home2/src/home/servlet/board/BoardFileDownloadServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="284" x="41" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="home.servlet.board.BoardWriteServlet" project="home2" 
+    file="/home2/src/home/servlet/board/BoardWriteServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="291" x="1977" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="home.servlet.board.BoardWriteWithFileServlet" project="home2" 
+    file="/home2/src/home/servlet/board/BoardWriteWithFileServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="288" x="5273" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="home.servlet.member.MemberChangeInfoServlet" project="home2" 
+    file="/home2/src/home/servlet/member/MemberChangeInfoServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="291" x="3806" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="home.servlet.member.MemberChangePasswordServlet" project="home2" 
+    file="/home2/src/home/servlet/member/MemberChangePasswordServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="291" x="5601" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="home.servlet.member.MemberCheckServlet" project="home2" 
+    file="/home2/src/home/servlet/member/MemberCheckServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="291" x="5932" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="home.servlet.member.MemberExitServlet" project="home2" 
+    file="/home2/src/home/servlet/member/MemberExitServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="291" x="3475" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="20" language="java" name="home.servlet.member.MemberJoinServlet" project="home2" 
+    file="/home2/src/home/servlet/member/MemberJoinServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="291" x="2580" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="21" language="java" name="home.servlet.member.MemberLoginServlet" project="home2" 
+    file="/home2/src/home/servlet/member/MemberLoginServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="291" x="963" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="22" language="java" name="home.servlet.member.MemberLogoutServlet" project="home2" 
+    file="/home2/src/home/servlet/member/MemberLogoutServlet.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="291" x="4721" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <dependency id="23">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="2"/>  
+  </dependency>  
+  <dependency id="24">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="25">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="26">    
+    <end type="SOURCE" refId="13"/>    
+    <end type="TARGET" refId="7"/>  
+  </dependency>  
+  <dependency id="27">    
+    <end type="SOURCE" refId="12"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <dependency id="28">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="6"/>  
+  </dependency>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

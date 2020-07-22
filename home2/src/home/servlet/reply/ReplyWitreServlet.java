@@ -22,6 +22,7 @@ public class ReplyWitreServlet  extends HttpServlet{
 //			목표 : 게시글 등록 후 상세 페이지로 이동
 //			준비 : 말머리, 제목, 내용, 작성자
 			
+			
 			//입력
 			MemberDto mdto = (MemberDto) req.getSession().getAttribute("userinfo");
 	
